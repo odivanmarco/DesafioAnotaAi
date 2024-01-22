@@ -2,12 +2,12 @@ package com.desafio.anota.ai.odivanmarcos;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 @SpringBootApplication
-public class OdivanmarcosApplication {
-
+@EnableMongoRepositories
+public class DesafioAnotaAiApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(OdivanmarcosApplication.class, args);
+		SpringApplication.run(DesafioAnotaAiApplication.class, args);
 	}
-
 }
