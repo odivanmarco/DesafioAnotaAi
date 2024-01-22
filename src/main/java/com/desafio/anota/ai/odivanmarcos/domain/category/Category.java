@@ -16,4 +16,10 @@ public class Category {
     private String title;
     private String description;
     private String ownerId;
+
+    public Category(CategoryDto dto){
+        this.title = dto.title();
+        this.description = dto.description();
+        this.ownerId = dto.ownerId();
+    }
 }
