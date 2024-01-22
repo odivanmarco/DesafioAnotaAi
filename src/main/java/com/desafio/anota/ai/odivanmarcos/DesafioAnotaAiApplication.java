@@ -6,10 +6,8 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 
 @SpringBootApplication
 @EnableMongoRepositories
-public class OdivanmarcosApplication {
-
+public class DesafioAnotaAiApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(OdivanmarcosApplication.class, args);
+		SpringApplication.run(DesafioAnotaAiApplication.class, args);
 	}
-
 }
