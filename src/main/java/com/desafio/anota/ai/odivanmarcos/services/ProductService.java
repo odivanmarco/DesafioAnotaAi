@@ -41,7 +41,7 @@ public class ProductService implements IProductService {
         this.categoryService.getById(dto.categoryId()).ifPresent(product::setCategory);
         if(!dto.title().isEmpty()) product.setTitle(dto.title());
         if(!dto.description().isEmpty()) product.setDescription(dto.description());
-        if(!(dto.price() == null)) product.setPrice(dto.price());
+        if((dto.price() != null)) product.setPrice(dto.price());
         this.repository.save(product);
         return product;
     }
