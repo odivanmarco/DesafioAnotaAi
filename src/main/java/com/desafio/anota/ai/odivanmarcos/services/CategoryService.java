@@ -38,12 +38,9 @@ public class CategoryService implements ICategoryService {
     @Override
     public Category update(String id, CategoryDto dto) {
         Category category = this.repository.findById(id).orElseThrow(CategoryNotFoundException::new);
-
-        if(!dto.title().isEmpty()) category.setTitle(dto.title());
-        if(!dto.description().isEmpty()) category.setDescription(dto.description());
-
+        if(!dto.title().isEmpty() || dto.title() != null) category.setTitle(dto.title());
+        if(!dto.description().isEmpty() || dto.description() != null) category.setDescription(dto.description());
         this.repository.save(category);
-
         return category;
     }
 
